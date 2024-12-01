@@ -1,0 +1,33 @@
+/* style.css */
+body{
+    font-family: Helvetica, "Times New Roman", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    aspect-ratio: 1;
+}
+
+.grid .grid-element{
+    border: 1px solid white;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.active{
+    background-color: darkblue;
+}
