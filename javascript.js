@@ -10,6 +10,8 @@ function createGrid(size){
             newDiv.classList.toggle('grid-element');
             newDiv.style.paddingBottom = 'calc(100% / ' + size + ')';
             newDiv.style.flexBasis = 'calc(100% / ' + size + ')';
+            newDiv.style.backgroundColor = 'rgb(255,255,255)';
+            newDiv.style.opacity = '0';
             
             grid.appendChild(newDiv);
 
@@ -21,16 +23,15 @@ function addHoverInteractivity(){
     const gridElements = document.querySelectorAll('.grid-element');
     gridElements.forEach((gridItem) => {
         gridItem.addEventListener('mouseenter', (Event) => {
-            Event.target.classList.add('active');
+            Event.target.style.backgroundColor = 'rgb('+ Math.floor(Math.random()*255)+', '+ Math.floor(Math.random()*255)+', '+ Math.floor(Math.random()*255)+')';
+            Event.target.style.opacity = parseFloat(getComputedStyle(Event.target).opacity) + 0.1;
         });
     })
 }
 
 function deleteGrid(){
     const grid = document.querySelector('.grid');
-    console.log(grid)
     const gridElements = document.querySelectorAll('.grid-element');
-    console.log(gridElements)
     
     gridElements.forEach((gridItem) => {
         grid.removeChild(gridItem);

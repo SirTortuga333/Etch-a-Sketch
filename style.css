@@ -27,7 +27,3 @@ body{
     border-radius: 5px;
     box-sizing: border-box; 
 }
-
-.active{
-    background-color: darkblue;
-}
